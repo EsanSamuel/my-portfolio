@@ -17,7 +17,7 @@ export type Project = {
 
 export const projects: Project[] = [
   {
-    id: "afterword", name: "Afterword", category: "MEETING INTELLIGENCE · FLAGSHIP",
+    id: "afterword", name: "Afterword (Techyz)", category: "MEETING INTELLIGENCE · FLAGSHIP",
     description: "A local-first meeting intelligence platform that turns audio and video into searchable conversations, clear decisions, and accountable next steps.",
     stack: ["Go", "Python", "PostgreSQL", "pgvector", "Whisper", "pyannote.audio", "React", "TypeScript", "Wails", "FFmpeg"],
     features: ["Local speech transcription with Whisper implementations", "Neural speaker diarization with single-speaker fallback", "Timestamp alignment between transcript segments and speakers", "Structured summaries, decisions, and speaker-attributed action items", "Local Ollama or Google Gemini providers", "384-dimensional embeddings with semantic search and question answering", "Organization-scoped data, HttpOnly sessions, and role-based access"],

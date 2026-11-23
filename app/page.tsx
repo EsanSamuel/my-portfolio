@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import MobileMenu from "./mobile-menu";
 import { projects } from "./projects-data";
 
 const skillGroups = [
@@ -32,7 +33,7 @@ function ProjectCard({ project, index }: { project: typeof projects[number]; ind
 export default function Home() {
   return <>
     <a className="skip-link" href="#top">Skip to content</a>
-    <header className="site-header portfolio-header"><Link className="wordmark" href="#top" aria-label="Esan Samuel, home">ES<span>.</span></Link><nav aria-label="Main navigation"><Link href="#top">Home</Link><Link href="#about">About</Link><Link href="#work">Work</Link><Link href="#experience">Experience</Link></nav><div className="header-socials"><a href="https://github.com/EsanSamuel" target="_blank" rel="noreferrer">GitHub <Arrow /></a><a href="https://drive.google.com/file/d/1Zz6gPfGZm9cJQ2LIfDv4a9VY8wiCzu47/view?usp=drive_link" target="_blank" rel="noreferrer">Resume <Arrow /></a></div></header>
+    <header className="site-header portfolio-header"><Link className="wordmark" href="#top" aria-label="Esan Samuel, home">ES<span>.</span></Link><nav aria-label="Main navigation"><Link href="#top">Home</Link><Link href="#about">About</Link><Link href="#work">Work</Link><Link href="#experience">Experience</Link></nav><div className="header-socials"><a href="https://github.com/EsanSamuel" target="_blank" rel="noreferrer">GitHub <Arrow /></a><a href="https://drive.google.com/file/d/1Zz6gPfGZm9cJQ2LIfDv4a9VY8wiCzu47/view?usp=drive_link" target="_blank" rel="noreferrer">Resume <Arrow /></a></div><MobileMenu /></header>
     <main id="top">
       <section className="personal-hero shell"><div className="hero-intro"><span className="hero-hello">HEY, I’M SAMUEL <i>✳</i></span><h1>Backend &amp; AI<br /><em>Engineer</em></h1><p>I build thoughtful software, reliable backend systems, and practical AI products.</p><div className="hero-buttons"><a className="personal-button" href="#work">See selected work <Arrow /></a><a className="personal-text-link" href="mailto:esansamuel555@gmail.com">Let’s talk <Arrow /></a></div></div><div className="hero-profile"><div className="profile-orbit orbit-one"/><div className="profile-orbit orbit-two"/><div className="profile-monogram">ES<span>.</span></div><span className="profile-caption">LAGOS, NIGERIA<br />AVAILABLE FOR OPPORTUNITIES</span><span className="profile-spark">✳</span></div><div className="hero-bottomline"><span>SOFTWARE · AI · INFRASTRUCTURE</span><a href="#about">A little about me <Arrow /></a><span>SCROLL TO EXPLORE ↓</span></div></section>
 

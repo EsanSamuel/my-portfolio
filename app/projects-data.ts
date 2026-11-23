@@ -17,13 +17,15 @@ export type Project = {
 
 export const projects: Project[] = [
   {
-    id: "afterword", name: "Afterword", category: "MEETING INTELLIGENCE · FLAGSHIP",
-    description: "A local-first meeting intelligence platform that turns audio and video into searchable conversations, clear decisions, and accountable next steps.",
-    stack: ["Go", "Python", "PostgreSQL", "pgvector", "Whisper", "pyannote.audio", "React", "TypeScript", "Wails", "FFmpeg"],
-    features: ["Local speech transcription with Whisper implementations", "Neural speaker diarization with single-speaker fallback", "Timestamp alignment between transcript segments and speakers", "Structured summaries, decisions, and speaker-attributed action items", "Local Ollama or Google Gemini providers", "384-dimensional embeddings with semantic search and question answering", "Organization-scoped data, HttpOnly sessions, and role-based access"],
+    id: "afterword", name: "Afterword (Techyz)", category: "MEETING INTELLIGENCE · FLAGSHIP",
+    description: "A local-first meeting intelligence platform with a notetaker bot that joins online meetings and turns conversations into searchable transcripts, decisions, and next steps.",
+    stack: ["Go", "Python", "PostgreSQL", "pgvector", "Whisper", "pyannote.audio", "Ollama", "Google Gemini", "React", "TypeScript", "Wails", "FFmpeg"],
+    features: ["Invite a notetaker bot to join and capture Google Meet, Microsoft Teams, or Zoom meetings", "Local speech recognition with Whisper models", "Machine-learning speaker diarization with pyannote.audio and single-speaker fallback", "Time-aligned transcript segments attributed to speakers", "Generate summaries, decisions, and action items with a local Ollama LLM, with Google Gemini as an option", "384-dimensional vector embeddings with pgvector for semantic search and question answering", "Privacy-focused local inference, organization-scoped data, HttpOnly sessions, and role-based access"],
     problem: "Meeting recordings hold useful context, but finding a decision or remembering who owns a task means replaying and manually sorting through long conversations.",
-    approach: "Afterword processes recordings through transcription and diarization, aligns speakers to time-coded transcript segments, and then creates structured meeting intelligence. Embeddings make past conversations searchable. Local inference options support privacy-focused workflows; monitoring makes the cost of inference visible.",
+    approach: "A notetaker bot can join a supported online meeting and capture the conversation; recordings can also be imported. Whisper handles local speech recognition, while pyannote.audio machine-learning models identify speakers and align them with transcript segments. A local Ollama LLM can produce summaries, decisions, and action items, with Google Gemini available as an alternate provider. pgvector embeddings make meeting history searchable with semantic retrieval and question answering.",
     sourcePrivate: true,
+    workflowTitle: "From live meeting to searchable knowledge",
+    workflow: ["Bot joins meeting", "Capture or import audio", "Whisper transcription", "pyannote diarization", "Local LLM insights", "Embeddings & search"],
   },
   {
     id: "jobsmart", name: "JobSmart", category: "AI · CAREER TECHNOLOGY",
